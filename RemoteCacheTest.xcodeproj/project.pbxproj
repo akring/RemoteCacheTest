@@ -14,6 +14,7 @@
 		5704F532274CCAAC003909FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5704F531274CCAAC003909FF /* Assets.xcassets */; };
 		5704F535274CCAAC003909FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5704F533274CCAAC003909FF /* LaunchScreen.storyboard */; };
 		5704F538274CCAAC003909FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5704F537274CCAAC003909FF /* main.m */; };
+		57E7A3D0274CD2CD007F8160 /* TestControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E7A3CF274CD2CD007F8160 /* TestControllerViewController.m */; };
 		E75974DFDED2C9F8C69C7856 /* Pods_RemoteCacheTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D095AEAB3535176EBE8C2AF /* Pods_RemoteCacheTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		5704F534274CCAAC003909FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5704F536274CCAAC003909FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5704F537274CCAAC003909FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		57E7A3CE274CD2CD007F8160 /* TestControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestControllerViewController.h; sourceTree = "<group>"; };
+		57E7A3CF274CD2CD007F8160 /* TestControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestControllerViewController.m; sourceTree = "<group>"; };
 		5D095AEAB3535176EBE8C2AF /* Pods_RemoteCacheTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteCacheTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +86,8 @@
 				5704F529274CCAAB003909FF /* SceneDelegate.m */,
 				5704F52B274CCAAB003909FF /* ViewController.h */,
 				5704F52C274CCAAB003909FF /* ViewController.m */,
+				57E7A3CE274CD2CD007F8160 /* TestControllerViewController.h */,
+				57E7A3CF274CD2CD007F8160 /* TestControllerViewController.m */,
 				5704F52E274CCAAB003909FF /* Main.storyboard */,
 				5704F531274CCAAC003909FF /* Assets.xcassets */,
 				5704F533274CCAAC003909FF /* LaunchScreen.storyboard */,
@@ -107,11 +112,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5704F53B274CCAAC003909FF /* Build configuration list for PBXNativeTarget "RemoteCacheTest" */;
 			buildPhases = (
+				F62FA0EE5A42D848EEC943D9 /* [XCRC] Prebuild */,
 				FA829D44AF93D0F71AD03479 /* [CP] Check Pods Manifest.lock */,
 				5704F51E274CCAAB003909FF /* Sources */,
 				5704F51F274CCAAB003909FF /* Frameworks */,
 				5704F520274CCAAB003909FF /* Resources */,
 				7EEFDA7536507E51E56F2995 /* [CP] Embed Pods Frameworks */,
+				FB5B477CECBD7687F12CB434 /* [XCRC] Postbuild */,
 			);
 			buildRules = (
 			);
@@ -168,28 +175,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BEE8044415F344EF1F0C8E6 /* [XCRC] Postbuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcpostbuild,
-			);
-			name = "[XCRC] Postbuild";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
 		7EEFDA7536507E51E56F2995 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,24 +192,27 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE79DBBDDA2433EC60A818A0 /* [XCRC] Mark */ = {
+		F62FA0EE5A42D848EEC943D9 /* [XCRC] Prebuild */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcprepare,
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcprebuild,
 			);
-			name = "[XCRC] Mark";
+			name = "[XCRC] Prebuild";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(TARGET_TEMP_DIR)/rc.enabled",
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration $CONFIGURATION --platform $PLATFORM_NAME";
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
 		};
 		FA829D44AF93D0F71AD03479 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -248,6 +236,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FB5B477CECBD7687F12CB434 /* [XCRC] Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcpostbuild,
+			);
+			name = "[XCRC] Postbuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -256,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5704F52D274CCAAB003909FF /* ViewController.m in Sources */,
+				57E7A3D0274CD2CD007F8160 /* TestControllerViewController.m in Sources */,
 				5704F527274CCAAB003909FF /* AppDelegate.m in Sources */,
 				5704F538274CCAAC003909FF /* main.m in Sources */,
 				5704F52A274CCAAB003909FF /* SceneDelegate.m in Sources */,
@@ -402,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CC = /Users/lvjun/Developer/RemoteCacheTest/.rc/xccc;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XE778GA928;
@@ -413,20 +425,25 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcld;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOL = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xclibtool;
 				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akring.RemoteCacheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EXEC = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcswiftc;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;
 			};
 			name = Debug;
 		};
@@ -436,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CC = /Users/lvjun/Developer/RemoteCacheTest/.rc/xccc;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XE778GA928;
@@ -447,20 +465,25 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcld;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBTOOL = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xclibtool;
 				MARKETING_VERSION = 1.0;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akring.RemoteCacheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EXEC = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcswiftc;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;
 			};
 			name = Release;
 		};

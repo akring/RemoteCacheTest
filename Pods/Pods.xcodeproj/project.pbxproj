@@ -589,10 +589,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C5C9A3D61A6DEB025C9ACE0866E949F /* Build configuration list for PBXNativeTarget "lottie-ios" */;
 			buildPhases = (
+				46EB2E00001450 /* [XCRC] Prebuild */,
 				DB239C7D24F46F65C33A88ED3E39D6E3 /* Headers */,
 				3DD73B13896A894B2FACEC8084E0B0A1 /* Sources */,
 				95AE726CE354B76A6E5BE28655B6498D /* Frameworks */,
 				EECEA9E3ABF51BFF6168DED7DFA8E1C8 /* Resources */,
+				46EB2E00001460 /* [XCRC] Postbuild */,
 			);
 			buildRules = (
 			);
@@ -666,6 +668,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46EB2E00001450 /* [XCRC] Prebuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcprebuild,
+			);
+			name = "[XCRC] Prebuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_TEMP_DIR)/rc.enabled",
+				"$(DWARF_DSYM_FOLDER_PATH)/$(DWARF_DSYM_FILE_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
+		};
+		46EB2E00001460 /* [XCRC] Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcpostbuild,
+			);
+			name = "[XCRC] Postbuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DD73B13896A894B2FACEC8084E0B0A1 /* Sources */ = {
@@ -934,6 +983,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F50A17FCE6F00B3C70C07EDC79430EE8 /* lottie-ios.debug.xcconfig */;
 			buildSettings = {
+				CC = /Users/lvjun/Developer/RemoteCacheTest/.rc/xccc;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -946,21 +996,30 @@
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcld;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBTOOL = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xclibtool;
 				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" -fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)";
 				PRODUCT_MODULE_NAME = Lottie;
 				PRODUCT_NAME = Lottie;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_EXEC = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcswiftc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;
 			};
 			name = Debug;
 		};
@@ -1030,6 +1089,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C781BD80277890DA78B334E7145D65C6 /* lottie-ios.release.xcconfig */;
 			buildSettings = {
+				CC = /Users/lvjun/Developer/RemoteCacheTest/.rc/xccc;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1042,22 +1102,31 @@
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcld;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBTOOL = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xclibtool;
 				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					" -fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)";
 				PRODUCT_MODULE_NAME = Lottie;
 				PRODUCT_NAME = Lottie;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_EXEC = /Users/lvjun/Developer/RemoteCacheTest/XCRC/xcswiftc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				XCREMOTE_CACHE_FAKE_SRCROOT = /xxxxxxxxxx;
 			};
 			name = Release;
 		};

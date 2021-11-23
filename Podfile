@@ -8,6 +8,7 @@ xcremotecache({
     'primary_repo' => 'git@github.com:akring/RemoteCacheTest.git',
     'mode' => 'consumer',
     'final_target' => 'RemoteCacheTest',
+    'check_platform' => 'iphoneos'
 })
 
 target 'RemoteCacheTest' do
