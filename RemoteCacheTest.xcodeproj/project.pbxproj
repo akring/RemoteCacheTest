@@ -14,9 +14,12 @@
 		5704F532274CCAAC003909FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5704F531274CCAAC003909FF /* Assets.xcassets */; };
 		5704F535274CCAAC003909FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5704F533274CCAAC003909FF /* LaunchScreen.storyboard */; };
 		5704F538274CCAAC003909FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5704F537274CCAAC003909FF /* main.m */; };
+		E75974DFDED2C9F8C69C7856 /* Pods_RemoteCacheTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D095AEAB3535176EBE8C2AF /* Pods_RemoteCacheTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B5DB7B70285D3D743835979 /* Pods-RemoteCacheTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteCacheTest.debug.xcconfig"; path = "Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest.debug.xcconfig"; sourceTree = "<group>"; };
+		4BF266250636C69897D0C9D7 /* Pods-RemoteCacheTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteCacheTest.release.xcconfig"; path = "Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest.release.xcconfig"; sourceTree = "<group>"; };
 		5704F522274CCAAB003909FF /* RemoteCacheTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteCacheTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5704F525274CCAAB003909FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5704F526274CCAAB003909FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		5704F534274CCAAC003909FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5704F536274CCAAC003909FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5704F537274CCAAC003909FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D095AEAB3535176EBE8C2AF /* Pods_RemoteCacheTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteCacheTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75974DFDED2C9F8C69C7856 /* Pods_RemoteCacheTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12798649405C04ED824A65A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B5DB7B70285D3D743835979 /* Pods-RemoteCacheTest.debug.xcconfig */,
+				4BF266250636C69897D0C9D7 /* Pods-RemoteCacheTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5704F519274CCAAB003909FF = {
 			isa = PBXGroup;
 			children = (
 				5704F524274CCAAB003909FF /* RemoteCacheTest */,
 				5704F523274CCAAB003909FF /* Products */,
+				12798649405C04ED824A65A2 /* Pods */,
+				63315FB2C412294E983758A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +92,14 @@
 			path = RemoteCacheTest;
 			sourceTree = "<group>";
 		};
+		63315FB2C412294E983758A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D095AEAB3535176EBE8C2AF /* Pods_RemoteCacheTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5704F53B274CCAAC003909FF /* Build configuration list for PBXNativeTarget "RemoteCacheTest" */;
 			buildPhases = (
+				FA829D44AF93D0F71AD03479 /* [CP] Check Pods Manifest.lock */,
 				5704F51E274CCAAB003909FF /* Sources */,
 				5704F51F274CCAAB003909FF /* Frameworks */,
 				5704F520274CCAAB003909FF /* Resources */,
+				7EEFDA7536507E51E56F2995 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +166,89 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BEE8044415F344EF1F0C8E6 /* [XCRC] Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcpostbuild,
+			);
+			name = "[XCRC] Postbuild";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
+				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
+		};
+		7EEFDA7536507E51E56F2995 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RemoteCacheTest/Pods-RemoteCacheTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE79DBBDDA2433EC60A818A0 /* [XCRC] Mark */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				/Users/lvjun/Developer/RemoteCacheTest/XCRC/xcprepare,
+			);
+			name = "[XCRC] Mark";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration $CONFIGURATION --platform $PLATFORM_NAME";
+		};
+		FA829D44AF93D0F71AD03479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemoteCacheTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5704F51E274CCAAB003909FF /* Sources */ = {
@@ -289,6 +398,7 @@
 		};
 		5704F53C274CCAAC003909FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5DB7B70285D3D743835979 /* Pods-RemoteCacheTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,11 +412,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akring.RemoteCacheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -316,6 +432,7 @@
 		};
 		5704F53D274CCAAC003909FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF266250636C69897D0C9D7 /* Pods-RemoteCacheTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -329,11 +446,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/lvjun/Developer/RemoteCacheTest=$(XCREMOTE_CACHE_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.akring.RemoteCacheTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

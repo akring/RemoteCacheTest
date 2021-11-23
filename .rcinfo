@@ -1,0 +1,7 @@
+---
+cache_addresses:
+- http://192.168.60.253:8080/file/pods
+primary_repo: git@github.com:akring/RemoteCacheTest.git
+mode: consumer
+xccc_file: "/Users/lvjun/Developer/RemoteCacheTest/.rc/xccc"
+remote_commit_file: "/Users/lvjun/Developer/RemoteCacheTest/.rc/arc.rc"
